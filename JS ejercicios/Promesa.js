@@ -1,4 +1,8 @@
 function obtenerDatos() {
+
+  console.log("Espera 2 segundos");
+
+//Temporizador de 2 segundos
   setTimeout(() => {
     console.log("Datos obtenidos correctamente");
 
