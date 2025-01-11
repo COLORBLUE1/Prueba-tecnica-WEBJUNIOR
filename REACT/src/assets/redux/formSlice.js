@@ -1,4 +1,3 @@
-// formSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 // Estado inicial del formulario

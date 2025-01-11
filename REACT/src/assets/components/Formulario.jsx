@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Link } from 'react-router';
 import {
   setNombre,
   setApellido,
@@ -75,9 +76,9 @@ const Formulario = () => {
   // Usar Formik para gestionar el formulario
   const formik = useFormik({
     initialValues: {
-      nombre,
-      apellido,
-      telefono,
+      nombre: "",
+      apellido: "",
+      telefono: "",
     },
     validationSchema,
     onSubmit: (values) => {
@@ -151,6 +152,7 @@ const Formulario = () => {
         <input type="submit" style={styleInputBotton} value="Enviar" disabled={isSubmitting} />
       </form>
       {error && <div style={{ color: 'red', fontSize: '14px' }}>{error}</div>}
+     
     </div>
   );
 };
